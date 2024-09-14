@@ -1,10 +1,11 @@
-/* Estilos gerais */
+/* Reset de margens, preenchimento e box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilo dos links */
 a {
     color: #fff;
     text-decoration: none;
@@ -15,12 +16,14 @@ a:hover {
     opacity: 0.7;
 }
 
+/* Estilo do logotipo */
 .logo {
     font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 4px;
 }
 
+/* Estilo da navegação */
 nav {
     display: flex;
     justify-content: space-around;
@@ -28,14 +31,20 @@ nav {
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
     background: #23232e;
     height: 8vh;
+    margin: 0; /* Garante que não há margens na navbar */
+    padding: 0 20px; /* Se precisar de algum espaçamento interno */
+    width: 100vw; /* Garante que a navbar ocupe toda a largura do ecrã */
+    box-sizing: border-box;
 }
 
+/* Estilo do fundo do conteúdo principal */
 main {
     background: url("bg.jpg") no-repeat center center;
     background-size: cover;
     height: 92vh;
 }
 
+/* Lista de navegação */
 .nav-list {
     list-style: none;
     display: flex;
@@ -47,6 +56,7 @@ main {
     margin-left: 32px;
 }
 
+/* Menu móvel */
 .mobile-menu {
     display: none;
     cursor: pointer;
@@ -60,25 +70,27 @@ main {
     transition: 0.3s;
 }
 
+/* Container do carrossel e texto */
 .container {
-    display: flex;  /* Alinha os elementos do carrossel e do texto lado a lado */
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    gap: 20px; /* Espaço entre o carrossel e o texto */
+    gap: 20px;
 }
 
 .text-content {
-    width: 45%; /* Ajuste a largura do texto */
+    width: 45%;
 }
 
+/* Estilo do carrossel */
 .carousel {
     position: relative;
     width: 50%;
-    max-width: 500px; 
+    max-width: 500px;
     margin: 50px auto;
     overflow: hidden;
-    right: 350px; /* Ajuste conforme necessário */
+    right: 350px;
     z-index: 1;
 }
 
@@ -97,6 +109,7 @@ main {
     display: block;
 }
 
+/* Controles do carrossel */
 .carousel-control {
     position: absolute;
     top: 50%;
@@ -123,8 +136,11 @@ main {
 
 /* Versão móvel */
 @media (max-width: 999px) {
-    html,body {
+    html, body {
         overflow-x: hidden;
+    }
+    nav {
+        padding: 0;
     }
 
     .nav-list {
@@ -155,24 +171,25 @@ main {
     }
 
     .container {
-        flex-direction: column; /* Muda a direção do layout para coluna */
-        align-items: center; /* Alinha itens na largura total do container */
+        flex-direction: column;
+        align-items: center;
     }
 
     .carousel {
         width: 100%;
-        max-width: none; /* Remove a largura máxima em dispositivos móveis */
+        max-width: none;
         margin: 0;
-        order: 1; /* Move o carrossel para cima */
-        right: 0; /* Ajuste a posição do carrossel no mobile */
+        order: 1;
+        right: 0;
     }
 
     .text-content {
-        padding: 10px; /* Ajuste o espaçamento interno para dispositivos móveis */
-        order: 2; /* Move o texto para baixo */
+        padding: 10px;
+        order: 2;
     }
 }
 
+/* Animação do fade da navegação */
 @keyframes navLinkFade {
     from {
         opacity: 0;
@@ -184,6 +201,7 @@ main {
     }
 }
 
+/* Animação do menu móvel */
 .mobile-menu.active .line1 {
     transform: rotate(-45deg) translate(-8px, 8px);
 }
