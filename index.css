@@ -35,6 +35,7 @@ nav {
     padding: 0 20px; /* Se precisar de algum espaçamento interno */
     width: 100vw; /* Garante que a navbar ocupe toda a largura do ecrã */
     box-sizing: border-box;
+    z-index: 11;
 }
 
 /* Estilo do fundo do conteúdo principal */
@@ -49,6 +50,8 @@ main {
     list-style: none;
     display: flex;
     z-index: 2;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-list li {
@@ -136,7 +139,7 @@ main {
 
 /* Versão móvel */
 @media (max-width: 999px) {
-    html, body {
+    body {
         overflow-x: hidden;
     }
     nav {
