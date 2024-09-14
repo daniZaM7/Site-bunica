@@ -60,9 +60,21 @@ main {
     transition: 0.3s;
 }
 
+.container {
+    display: flex;  /* Alinha os elementos do carrossel e do texto lado a lado */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 20px; /* Espaço entre o carrossel e o texto */
+}
+
+.text-content {
+    width: 45%; /* Ajuste a largura do texto */
+}
+
 .carousel {
     position: relative;
-    width: 100%;
+    width: 50%;
     max-width: 500px; 
     margin: 50px auto;
     overflow: hidden;
@@ -144,7 +156,7 @@ main {
 
     .container {
         flex-direction: column; /* Muda a direção do layout para coluna */
-        align-items: stretch; /* Alinha itens na largura total do container */
+        align-items: center; /* Alinha itens na largura total do container */
     }
 
     .carousel {
